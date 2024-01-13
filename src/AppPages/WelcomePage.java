@@ -64,7 +64,12 @@ public class WelcomePage extends JFrame{
                             JOptionPane.showMessageDialog(null, "Nie ma takiego quizu!", "Zly kod quizu!", JOptionPane.ERROR_MESSAGE);
                         }
                         else{
-
+                            SwingUtilities.invokeLater(() -> {
+                                WaitingRoomPage waitingRoomPage = new WaitingRoomPage();
+                                waitingRoomPage.createWaitingRoomPage(username, IPAddress, portNumber);
+                                waitingRoomPage.setVisible(true);
+                            });
+                            SwingUtilities.getWindowAncestor(panel).setVisible(false);
                         }
 
                     } catch (IOException err) {

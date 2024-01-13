@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cafc44f-401e-4114-adee-caaf73256f8a" name="Changes" comment="Client: login and connection page added.&#10;&#10;Server: tested connection and data handling and responsing to client after succesfull connection.">
-      <change afterPath="$PROJECT_DIR$/src/AppPages/CreateQuizPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppPages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppPages/WelcomePage.java" afterDir="false" />
+    <list default="true" id="1cafc44f-401e-4114-adee-caaf73256f8a" name="Changes" comment="WelcomePage added&#10;CreateQuizPage added&#10;server multi-connections added&#10;some rare cases fixes done">
+      <change afterPath="$PROJECT_DIR$/src/AppPages/WaitingRoomPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server" beforeDir="false" afterPath="$PROJECT_DIR$/server" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KahootApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KahootApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppPages/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/WelcomePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704510371155</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="WelcomePage added&#10;CreateQuizPage added&#10;server multi-connections added&#10;some rare cases fixes done">
+      <option name="closed" value="true" />
+      <created>1705104808106</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705104808112</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +147,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Project files created." />
     <MESSAGE value="Client: login and connection page added.&#10;&#10;Server: tested connection and data handling and responsing to client after succesfull connection." />
-    <option name="LAST_COMMIT_MESSAGE" value="Client: login and connection page added.&#10;&#10;Server: tested connection and data handling and responsing to client after succesfull connection." />
+    <MESSAGE value="WelcomePage added&#10;CreateQuizPage added&#10;server multi-connections added&#10;some rare cases fixes done" />
+    <option name="LAST_COMMIT_MESSAGE" value="WelcomePage added&#10;CreateQuizPage added&#10;server multi-connections added&#10;some rare cases fixes done" />
   </component>
 </project>

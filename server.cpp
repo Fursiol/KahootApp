@@ -37,6 +37,7 @@ class room{
 
 int main() {
     vector<room> rooms;
+    vector<string> logged_in;
 
     room newroom;
     newroom.enter_code = "debil";
@@ -105,6 +106,11 @@ int main() {
             for (int i = 0; i < v.size(); i++) {
                 cout << v[i] << " ";
             }
+
+            //Zalogowanie sie
+            if(v[0] == "login"){
+
+            }
             
             //Dolaczenie do quizu
             if(v[0] == "join"){
@@ -112,6 +118,8 @@ int main() {
                 for(int i = 0; i < rooms.size(); i++){
                     if(v[1] == rooms[i].enter_code){
                         new_player.name = v[2];
+                        new_player.ip_address = clientIP;
+                        new_player.portNumber = clientPort;
                         rooms[i].players.push_back(new_player);
                         send(clientSocket, "Y", strlen("Y"), 0);
                         std::cout << "Sent join confirmation to client " << clientIP << ":" << clientPort << std::endl;
@@ -122,6 +130,26 @@ int main() {
                     send(clientSocket, "N", strlen("N"), 0);
                     std::cout << "Sent DENIAL to client " << clientIP << ":" << clientPort << std::endl;
                 }
+            }
+
+            //Utworzenie quizu
+            if(v[0] == "create"){
+
+            }
+
+            //Dodanie pytania
+            if(v[0] == "add"){
+
+            }
+
+            //Uruchomienie quizu
+            if(v[0] == "start"){
+
+            }
+
+            //Przeslanie odpowiedzi
+            if(v[0] == "answer"){
+
             }
 
 
