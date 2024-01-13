@@ -48,7 +48,7 @@ public class CreateQuizPage extends JFrame {
                     BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 
-                    out.println("create " + username + " " + questionCount);
+                    out.println("create|" + username + "|" + questionCount);
                     System.out.println("Sent quiz creation to server");
 
                     String response = in.readLine();
@@ -56,7 +56,7 @@ public class CreateQuizPage extends JFrame {
 
                     SwingUtilities.invokeLater(() -> {
                         CreateQuestionPage createQuestionPage = new CreateQuestionPage();
-                        createQuestionPage.createQuestionPage(response, Integer.parseInt(questionCount), 1);
+                        createQuestionPage.createQuestionPage(response, Integer.parseInt(questionCount), 1, IPAddress, portNumber, username);
                         createQuestionPage.setVisible(true);
                     });
                     SwingUtilities.getWindowAncestor(panel).setVisible(false);

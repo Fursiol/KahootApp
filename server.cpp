@@ -12,13 +12,13 @@ class question{
     public:
         int id;
         string question;
-        int good_answer;
+        string good_answer;
         vector<string> all_answers;
 };
 
 class player{
     public:
-        int id;
+        int socket;
         string name;
         int score;
         string ip_address;
@@ -28,16 +28,30 @@ class player{
 class room{
     public:
         int id;
-        string owner;
+        player owner;
         vector<question> questions;
         vector<player> players;
-        int time_per_question;
+        string time_per_question;
         string enter_code;
 };
 
+string gen_random(const int len) {
+    static const char alphanum[] =
+        "0123456789"
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        "abcdefghijklmnopqrstuvwxyz";
+    string tmp_s;
+    tmp_s.reserve(len);
+
+    for (int i = 0; i < len; ++i) {
+        tmp_s += alphanum[rand() % (sizeof(alphanum) - 1)];
+    }
+    
+    return tmp_s;
+}
+
 int main() {
     vector<room> rooms;
-    vector<string> logged_in;
 
     room newroom;
     newroom.enter_code = "debil";
@@ -80,7 +94,6 @@ int main() {
             continue;
         }
 
-        // Wyświetlanie adresu IP i numeru portu klienta
         char clientIP[INET_ADDRSTRLEN];
         inet_ntop(AF_INET, &(clientAddress.sin_addr), clientIP, INET_ADDRSTRLEN);
         int clientPort = ntohs(clientAddress.sin_port);
@@ -91,15 +104,14 @@ int main() {
         if (bytesRead == -1) {
             std::cerr << "Error receiving data\n";
         } else {
-            buffer[bytesRead] = '\0'; // Null-terminate the received data
+            buffer[bytesRead] = '\0';
             std::cout << "Received data from client " << clientIP << ":" << clientPort << ": ";
 
-            //Dzielenie wiadomosci na czesci
             string str = buffer;
             stringstream ss(str);
             string s;
             vector<string> v;
-            while (getline(ss, s, ' ')) {
+            while (getline(ss, s, '|')) {
                 v.push_back(s);
             }
 
@@ -135,11 +147,45 @@ int main() {
 
             //Utworzenie quizu
             if(v[0] == "create"){
+                string code = gen_random(6);
+                room new_room;
+                player owner;
+                owner.socket = clientSocket;
+                owner.ip_address = clientIP;
+                owner.portNumber = clientPort;
+                new_room.owner = owner;
+                new_room.time_per_question = v[2];
+                new_room.enter_code = code;
 
+                char* codeChar = new char[code.size() + 1]; 
+                strcpy(codeChar, code.c_str()); 
+
+                send(clientSocket, codeChar, strlen(codeChar), 0);
+                std::cout << "Sent create approval to client " << clientIP << ":" << clientPort << std::endl;
+
+                rooms.push_back(new_room);
+                delete codeChar;
             }
 
             //Dodanie pytania
             if(v[0] == "add"){
+                for(int i = 0; i < rooms.size(); i++){
+                    if(rooms[i].enter_code == v[1]){
+                        question new_q;
+                        new_q.question = v[2];
+                        new_q.good_answer = v[3];
+                        new_q.all_answers = {v[3], v[4], v[5], v[6]};
+                        rooms[i].questions.push_back(new_q);
+
+                        send(clientSocket, "Y", strlen("Y"), 0);
+                        std::cout << "Sent question add approval to client " << clientIP << ":" << clientPort << std::endl;
+                    }
+                }
+
+            }
+
+            //Otrzymanie informacji na temat poczekalni
+            if(v[0] == "w8info"){
 
             }
 
@@ -153,14 +199,15 @@ int main() {
 
             }
 
+            //Otrzymanie informacji na temat punktacji
+            if(v[0] == "quizinfo"){
 
+            }
+
+            close(clientSocket);
         }
-
-        close(clientSocket);
     }
 
-    // Nie osiągnie tego punktu, ale dla zakończenia pętli
     close(serverSocket);
-
     return 0;
 }

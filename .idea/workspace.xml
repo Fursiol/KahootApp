@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cafc44f-401e-4114-adee-caaf73256f8a" name="Changes" comment="server skeleton">
-      <change afterPath="$PROJECT_DIR$/src/AppPages/CreateQuestionPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server" beforeDir="false" afterPath="$PROJECT_DIR$/server" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppPages/CreateQuestionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/CreateQuestionPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppPages/CreateQuizPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/CreateQuizPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppPages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppPages/WaitingRoomPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/WaitingRoomPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppPages/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/WelcomePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="KahootApp" type="Application" factoryName="Application">
+    <configuration name="KahootApp" type="Application" factoryName="Application" singleton="false">
       <option name="MAIN_CLASS_NAME" value="KahootApp" />
       <module name="KahootApp" />
       <method v="2">
@@ -126,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705106472902</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="server skeleton">
+      <option name="closed" value="true" />
+      <created>1705118087140</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705118087140</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
