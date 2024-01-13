@@ -181,12 +181,23 @@ int main() {
                         std::cout << "Sent question add approval to client " << clientIP << ":" << clientPort << std::endl;
                     }
                 }
-
             }
 
             //Otrzymanie informacji na temat poczekalni
             if(v[0] == "w8info"){
-
+                string response = " ";
+                for(int i = 0; i < rooms.size(); i++){
+                    if(v[1] == rooms[i].enter_code){
+                        response += rooms[i].players.size();
+                        for(int j = 0; j < rooms[i].players.size(); j++){
+                            response += rooms[i].players[j].name;
+                            response += ",";
+                        }
+                    }
+                }
+                cout << response << endl;
+                send(clientSocket, response.c_str(), strlen(response.c_str()), 0);
+                std::cout << "Sent question add approval to client " << clientIP << ":" << clientPort << std::endl;
             }
 
             //Uruchomienie quizu

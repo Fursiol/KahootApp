@@ -54,7 +54,7 @@ public class WelcomePage extends JFrame{
                          BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                          PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
 
-                        out.println("join|" + code + "|" + username);
+                        out.println("join|" + code + "|" + username + "|");
                         System.out.println("Sent quiz-code to server: " + code);
 
                         String response = in.readLine();

@@ -68,7 +68,7 @@ public class CreateQuestionPage extends JFrame {
 
                 String sendQuestion = "add|" + code + "|" + content + "|" + correctAnswer
                         + "|" + incorrectAnswer1 + "|" + incorrectAnswer2 + "|"
-                        + incorrectAnswer3;
+                        + incorrectAnswer3 + "|";
 
                 try (Socket socket = new Socket(ipAddress, Integer.parseInt(port));
                      BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
