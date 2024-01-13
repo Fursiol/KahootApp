@@ -109,7 +109,8 @@ int main() {
 
             //Zalogowanie sie
             if(v[0] == "login"){
-
+                send(clientSocket, "Y", strlen("Y"), 0);
+                std::cout << "Sent login approval to client " << clientIP << ":" << clientPort << std::endl;
             }
             
             //Dolaczenie do quizu
@@ -122,13 +123,13 @@ int main() {
                         new_player.portNumber = clientPort;
                         rooms[i].players.push_back(new_player);
                         send(clientSocket, "Y", strlen("Y"), 0);
-                        std::cout << "Sent join confirmation to client " << clientIP << ":" << clientPort << std::endl;
+                        std::cout << "Sent join approval to client " << clientIP << ":" << clientPort << std::endl;
                         break;
                     }
                 }
                 if(!(new_player.name.size() > 0)){
                     send(clientSocket, "N", strlen("N"), 0);
-                    std::cout << "Sent DENIAL to client " << clientIP << ":" << clientPort << std::endl;
+                    std::cout << "Sent join DENIAL to client " << clientIP << ":" << clientPort << std::endl;
                 }
             }
 

@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cafc44f-401e-4114-adee-caaf73256f8a" name="Changes" comment="WelcomePage added&#10;CreateQuizPage added&#10;server multi-connections added&#10;some rare cases fixes done">
-      <change afterPath="$PROJECT_DIR$/src/AppPages/WaitingRoomPage.java" afterDir="false" />
+    <list default="true" id="1cafc44f-401e-4114-adee-caaf73256f8a" name="Changes" comment="server skeleton">
+      <change afterPath="$PROJECT_DIR$/src/AppPages/CreateQuestionPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server" beforeDir="false" afterPath="$PROJECT_DIR$/server" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppPages/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/WelcomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppPages/CreateQuizPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/CreateQuizPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppPages/WaitingRoomPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/WaitingRoomPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,19 +43,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.CreateOrJoinView.executor&quot;: &quot;Run&quot;,
-    &quot;Application.KahootApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.CreateOrJoinView.executor": "Run",
+    "Application.KahootApp.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/out/production/KahootApp" />
@@ -117,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705104808112</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="server skeleton">
+      <option name="closed" value="true" />
+      <created>1705106472902</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705106472902</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,6 +157,10 @@
     <MESSAGE value="Project files created." />
     <MESSAGE value="Client: login and connection page added.&#10;&#10;Server: tested connection and data handling and responsing to client after succesfull connection." />
     <MESSAGE value="WelcomePage added&#10;CreateQuizPage added&#10;server multi-connections added&#10;some rare cases fixes done" />
-    <option name="LAST_COMMIT_MESSAGE" value="WelcomePage added&#10;CreateQuizPage added&#10;server multi-connections added&#10;some rare cases fixes done" />
+    <MESSAGE value="server skeleton" />
+    <option name="LAST_COMMIT_MESSAGE" value="server skeleton" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/KahootApp$KahootApp.ic" NAME="KahootApp Coverage Results" MODIFIED="1705108098825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

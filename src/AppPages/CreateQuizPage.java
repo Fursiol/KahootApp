@@ -4,6 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 
 public class CreateQuizPage extends JFrame {
 
@@ -40,6 +44,22 @@ public class CreateQuizPage extends JFrame {
                     Integer.parseInt(questionCount);
                     Integer.parseInt(timePerQuestion);
 
+                    Socket socket = new Socket(IPAddress, Integer.parseInt(portNumber));
+                    BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+
+                    out.println("create " + username + " " + questionCount);
+                    System.out.println("Sent quiz creation to server");
+
+                    String response = in.readLine();
+                    System.out.println("Received response from server: " + response);
+
+                    SwingUtilities.invokeLater(() -> {
+                        CreateQuestionPage createQuestionPage = new CreateQuestionPage();
+                        createQuestionPage.createQuestionPage(response, Integer.parseInt(questionCount), 1);
+                        createQuestionPage.setVisible(true);
+                    });
+                    SwingUtilities.getWindowAncestor(panel).setVisible(false);
 
                 } catch (Exception err){
                     JOptionPane.showMessageDialog(null, "Wpisz poprawne wartosci!", "Niepoprawne wartosci", JOptionPane.ERROR_MESSAGE);
