@@ -68,7 +68,7 @@ public class CreateQuestionPage extends JFrame {
 
                 String sendQuestion = "add|" + code + "|" + content + "|" + correctAnswer
                         + "|" + incorrectAnswer1 + "|" + incorrectAnswer2 + "|"
-                        + incorrectAnswer3;
+                        + incorrectAnswer3 + "|";
 
                 try (Socket socket = new Socket(ipAddress, Integer.parseInt(port));
                      BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
@@ -89,7 +89,7 @@ public class CreateQuestionPage extends JFrame {
                     } else {
                         SwingUtilities.invokeLater(() -> {
                             WaitingRoomPage waitingRoomPage = new WaitingRoomPage();
-                            waitingRoomPage.createWaitingRoomPage(username, ipAddress, port, code);
+                            waitingRoomPage.createWaitingRoomPage(username, ipAddress, port, code, true);
                             waitingRoomPage.setVisible(true);
                         });
                     }

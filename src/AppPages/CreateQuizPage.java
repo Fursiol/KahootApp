@@ -48,7 +48,7 @@ public class CreateQuizPage extends JFrame {
                     BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 
-                    out.println("create|" + username + "|" + questionCount);
+                    out.println("create|" + username + "|" + timePerQuestion + "|");
                     System.out.println("Sent quiz creation to server");
 
                     String response = in.readLine();

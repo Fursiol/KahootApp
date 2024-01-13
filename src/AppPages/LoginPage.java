@@ -65,7 +65,7 @@ public class LoginPage extends JFrame{
                          BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                          PrintWriter out = new PrintWriter(socket.getOutputStream(), true)) {
 
-                        out.println("login|" + username);
+                        out.println("login|" + username + "|");
                         System.out.println("Sent username to server: " + username);
 
                         String response = in.readLine();

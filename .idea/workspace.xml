@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cafc44f-401e-4114-adee-caaf73256f8a" name="Changes" comment="server skeleton">
+      <change afterPath="$PROJECT_DIR$/src/AppPages/AnswerPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppPages/SummaryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server" beforeDir="false" afterPath="$PROJECT_DIR$/server" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppPages/CreateQuestionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/CreateQuestionPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppPages/CreateQuizPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/CreateQuizPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppPages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppPages/WaitingRoomPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/WaitingRoomPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppPages/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppPages/WelcomePage.java" afterDir="false" />
     </list>
@@ -45,19 +46,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.CreateOrJoinView.executor": "Run",
-    "Application.KahootApp.executor": "Run",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.CreateOrJoinView.executor&quot;: &quot;Run&quot;,
+    &quot;Application.KahootApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/out/production/KahootApp" />
@@ -136,7 +137,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705118087140</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="server skeleton">
+      <option name="closed" value="true" />
+      <created>1705124699718</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705124699718</updated>
+    </task>
+    <task id="LOCAL-00008" summary="server skeleton">
+      <option name="closed" value="true" />
+      <created>1705128306290</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705128306290</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
