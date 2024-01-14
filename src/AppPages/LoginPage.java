@@ -18,14 +18,14 @@ public class LoginPage extends JFrame{
 
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10)); // Dodanie marginesów
+        panel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Pusty obszar dla estetyki
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
 
         JPanel ipAddressPanel = createLabeledField("Adres IP:", new JTextField());
         panel.add(ipAddressPanel);
 
-        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Pusty obszar dla estetyki
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
 
         JPanel portPanel = createLabeledField("Numer portu:", new JTextField());
         panel.add(portPanel);
@@ -33,12 +33,12 @@ public class LoginPage extends JFrame{
         JPanel usernamePanel = createLabeledField("Nazwa uzytkownika:", new JTextField());
         panel.add(usernamePanel);
 
-        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Pusty obszar dla estetyki
+        panel.add(Box.createRigidArea(new Dimension(0, 10))); 
 
         JButton connectButton = getConnectButton(ipAddressPanel, portPanel, usernamePanel);
         panel.add(connectButton);
 
-        panel.add(Box.createRigidArea(new Dimension(0, 10))); // Pusty obszar dla estetyki
+        panel.add(Box.createRigidArea(new Dimension(0, 10)))
 
         JLabel authorsLabel = new JLabel("Jakub Furs 148193", SwingConstants.CENTER);
         panel.add(authorsLabel);
@@ -77,7 +77,6 @@ public class LoginPage extends JFrame{
                             welcomePage.setVisible(true);
                         });
 
-                        // Ukryj pierwsze okno
                         SwingUtilities.getWindowAncestor(usernamePanel).setVisible(false);
 
                     } catch (IOException err) {
