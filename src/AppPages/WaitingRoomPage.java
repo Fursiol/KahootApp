@@ -17,11 +17,11 @@ public class WaitingRoomPage extends JFrame {
 
         JPanel panel = new JPanel(new BorderLayout());
 
-        // Etykieta z wynikiem
+
         JLabel resultLabel = new JLabel("Gracze:");
         panel.add(resultLabel, BorderLayout.CENTER);
 
-        // Przycisk "Aktualizuj"
+
         JButton updateButton = new JButton("Aktualizuj");
         updateButton.addActionListener(new ActionListener() {
             @Override
@@ -43,7 +43,7 @@ public class WaitingRoomPage extends JFrame {
             }
         });
 
-        // Przycisk "Gotowy"
+
         JButton doneButton = new JButton("Gotowy");
         doneButton.addActionListener(new ActionListener() {
             @Override
@@ -99,7 +99,6 @@ public class WaitingRoomPage extends JFrame {
             }
         });
 
-        // Panel z przyciskami
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(updateButton);
         buttonPanel.add(doneButton);
